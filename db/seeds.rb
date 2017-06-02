@@ -5,19 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create!(name:  "Rodman Aguirre",
-             email: "rodfagui@gmail.com",
-             password:              "ram28285242",
-             password_confirmation: "ram28285242",
-             admin: true)
+# User.create!(name:  "Rodman Aguirre",
+#              email: "rodfagui@gmail.com",
+#              password:              "ram28285242",
+#              password_confirmation: "ram28285242",
+#              admin: true)
 
-29.times do |n|
-  name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
-  password = "password"
-  User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password,
-               admin: false)
-end
+# 11.times do |n|
+#   name  = Faker::Name.name
+#   email = "example-#{n+1}@railstutorial.org"
+#   password = "password"
+#   User.create!(name:  name,
+#                email: email,
+#                password:              password,
+#                password_confirmation: password,
+#                admin: false)
+# end
+
+# users = User.order(:created_at).take(6)
+# 10.times do
+#   title = Faker::Lorem.sentence(3)
+#   content = Faker::Lorem.paragraph(5)
+#   users.each { |user| user.microposts.create!(title: title, content: content) }
+# end
