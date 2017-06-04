@@ -2,9 +2,13 @@
 <article class="microposts_view">
   <h1 class="title"><%= @micropost.title %></h1>
   <span class="author">By: <%= @micropost.user.name %></span>
-  <span class="content"><%= simple_format(@micropost.content) %></span>
+  <span class="content"><%= markdown(@micropost.content) %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(@micropost.created_at) %> ago.
+    <% if current_user?(@micropost.user) %>
+      | <%= link_to "edit", edit_micropost_path(@micropost) %>
+      | <%= link_to "delete", @micropost, method: :delete, data: { confirm: "You sure?" } %>
+    <% end %>
   </span>
   
   <h2><%= pluralize(@micropost.comments.count, "Comment") %></h2>
@@ -14,7 +18,7 @@
         <%= link_to gravatar_for(comment.user, size: 20), comment.user %>
         <span class="user"><%= link_to comment.user.name, comment.user %></span> 
       </header>
-      <div class="panel-body"><%= comment.body %></div>
+      <div class="panel-body"><%= markdown(comment.body) %></div>
     </div>
   <% end %>
   <% if logged_in? %>

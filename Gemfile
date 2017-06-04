@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'faker', '1.7.3'
 
+gem 'redcarpet', '3.4.0'
+
 gem 'will_paginate', '3.1.5'
 
 gem 'bootstrap-will_paginate', '1.0.0'
