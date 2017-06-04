@@ -2,5 +2,5 @@
   <%= render 'shared/error_messages', object: f.object %>
   <%= f.text_field :title, placeholder: "Title...", class: 'form-control' %>
   <%= f.text_area :content, placeholder: "Compose new post...", class: 'form-control', rows: '10' %>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= f.submit @micropost.new_record? ? "Post" : "Edit Post", class: "btn btn-primary" %>
 <% end %>

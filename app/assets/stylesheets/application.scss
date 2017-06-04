@@ -211,10 +211,47 @@ input {
     display: block;
     margin-left: 60px;
   }
+  .comment {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
   .gravatar {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
+  }
+}
+
+.microposts_view {
+  .title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .author {
+    color: $gray-light;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .content {
+    display: block;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase; 
   }
 }
 

@@ -20,4 +20,7 @@
     <h2>This is the home page for super blog application.</h2>
     <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
   </div>
+  
+  <h3>All Posts</h3>
+  <%= render 'shared/all_microposts' %>
 <% end %>
