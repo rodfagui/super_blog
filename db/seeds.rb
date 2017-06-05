@@ -22,9 +22,9 @@
 #                admin: false)
 # end
 
-# users = User.order(:created_at).take(6)
+# users = User.order(:created_at).take(1)
 # 10.times do
 #   title = Faker::Lorem.sentence(3)
-#   content = Faker::Lorem.paragraph(5)
+#   content = Faker::Lorem.paragraph(20)
 #   users.each { |user| user.microposts.create!(title: title, content: content) }
 # end
